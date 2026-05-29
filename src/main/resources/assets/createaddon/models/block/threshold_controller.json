@@ -1,0 +1,49 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "casing": "minecraft:block/cut_copper",
+    "brass": "minecraft:block/gold_block",
+    "lamp_on": "minecraft:block/redstone_lamp_on",
+    "lamp_off": "minecraft:block/redstone_lamp",
+    "particle": "minecraft:block/cut_copper"
+  },
+  "elements": [
+    {
+      "name": "Base",
+      "from": [1, 0, 1],
+      "to": [15, 10, 15],
+      "faces": {
+        "down": { "texture": "#casing" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#casing" },
+        "south": { "texture": "#casing" },
+        "west": { "texture": "#casing" },
+        "east": { "texture": "#casing" }
+      }
+    },
+    {
+      "name": "Screen",
+      "from": [3, 10.001, 3],
+      "to": [13, 12, 13],
+      "faces": {
+        "up": { "texture": "#lamp_off" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "name": "Indicator",
+      "from": [6, 12.001, 6],
+      "to": [10, 13, 10],
+      "faces": {
+        "up": { "texture": "#lamp_off" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    }
+  ]
+}

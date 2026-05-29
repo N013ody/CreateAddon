@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "createaddon:block/relative_velocity_vector_sensor" }
+  }
+}

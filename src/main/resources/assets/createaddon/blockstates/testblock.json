@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "createaddon:block/testblock",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "createaddon:block/testblock"
+    },
+    "axis=z": {
+      "model": "createaddon:block/testblock",
+      "x": 90
+    }
+  }
+}

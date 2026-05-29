@@ -1,0 +1,8 @@
+{
+  "parent": "createaddon:block/guidance_computer",
+  "display": {
+    "gui": { "rotation": [30, 45, 0], "scale": [0.625, 0.625, 0.625] },
+    "fixed": { "scale": [0.625, 0.625, 0.625] },
+    "ground": { "translation": [0, 2, 0], "scale": [0.25, 0.25, 0.25] }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "createaddon:block/inertial_drift_sensor" }
+  }
+}

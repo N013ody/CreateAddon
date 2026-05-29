@@ -1,0 +1,83 @@
+{
+  "credit": "Rotary frame shell for arbitrary-angle block rendering.",
+  "textures": {
+    "copper": "minecraft:block/cut_copper",
+    "dark_copper": "minecraft:block/weathered_cut_copper",
+    "brass": "minecraft:block/gold_block",
+    "particle": "minecraft:block/cut_copper"
+  },
+  "elements": [
+    {
+      "name": "bottom_ring_north",
+      "from": [1, 0, 1],
+      "to": [15, 2, 3],
+      "faces": { "down": { "texture": "#dark_copper" }, "up": { "texture": "#brass" }, "north": { "texture": "#copper" }, "south": { "texture": "#copper" }, "west": { "texture": "#brass" }, "east": { "texture": "#brass" } }
+    },
+    {
+      "name": "bottom_ring_south",
+      "from": [1, 0, 13],
+      "to": [15, 2, 15],
+      "faces": { "down": { "texture": "#dark_copper" }, "up": { "texture": "#brass" }, "north": { "texture": "#copper" }, "south": { "texture": "#copper" }, "west": { "texture": "#brass" }, "east": { "texture": "#brass" } }
+    },
+    {
+      "name": "bottom_ring_west",
+      "from": [1, 0, 3],
+      "to": [3, 2, 13],
+      "faces": { "down": { "texture": "#dark_copper" }, "up": { "texture": "#brass" }, "north": { "texture": "#brass" }, "south": { "texture": "#brass" }, "west": { "texture": "#copper" }, "east": { "texture": "#copper" } }
+    },
+    {
+      "name": "bottom_ring_east",
+      "from": [13, 0, 3],
+      "to": [15, 2, 13],
+      "faces": { "down": { "texture": "#dark_copper" }, "up": { "texture": "#brass" }, "north": { "texture": "#brass" }, "south": { "texture": "#brass" }, "west": { "texture": "#copper" }, "east": { "texture": "#copper" } }
+    },
+    {
+      "name": "top_ring_north",
+      "from": [1, 14, 1],
+      "to": [15, 16, 3],
+      "faces": { "down": { "texture": "#brass" }, "up": { "texture": "#dark_copper" }, "north": { "texture": "#copper" }, "south": { "texture": "#copper" }, "west": { "texture": "#brass" }, "east": { "texture": "#brass" } }
+    },
+    {
+      "name": "top_ring_south",
+      "from": [1, 14, 13],
+      "to": [15, 16, 15],
+      "faces": { "down": { "texture": "#brass" }, "up": { "texture": "#dark_copper" }, "north": { "texture": "#copper" }, "south": { "texture": "#copper" }, "west": { "texture": "#brass" }, "east": { "texture": "#brass" } }
+    },
+    {
+      "name": "top_ring_west",
+      "from": [1, 14, 3],
+      "to": [3, 16, 13],
+      "faces": { "down": { "texture": "#brass" }, "up": { "texture": "#dark_copper" }, "north": { "texture": "#brass" }, "south": { "texture": "#brass" }, "west": { "texture": "#copper" }, "east": { "texture": "#copper" } }
+    },
+    {
+      "name": "top_ring_east",
+      "from": [13, 14, 3],
+      "to": [15, 16, 13],
+      "faces": { "down": { "texture": "#brass" }, "up": { "texture": "#dark_copper" }, "north": { "texture": "#brass" }, "south": { "texture": "#brass" }, "west": { "texture": "#copper" }, "east": { "texture": "#copper" } }
+    },
+    {
+      "name": "post_nw",
+      "from": [1, 2, 1],
+      "to": [3, 14, 3],
+      "faces": { "north": { "texture": "#copper" }, "south": { "texture": "#brass" }, "west": { "texture": "#copper" }, "east": { "texture": "#brass" }, "up": { "texture": "#brass" }, "down": { "texture": "#dark_copper" } }
+    },
+    {
+      "name": "post_ne",
+      "from": [13, 2, 1],
+      "to": [15, 14, 3],
+      "faces": { "north": { "texture": "#copper" }, "south": { "texture": "#brass" }, "west": { "texture": "#brass" }, "east": { "texture": "#copper" }, "up": { "texture": "#brass" }, "down": { "texture": "#dark_copper" } }
+    },
+    {
+      "name": "post_sw",
+      "from": [1, 2, 13],
+      "to": [3, 14, 15],
+      "faces": { "north": { "texture": "#brass" }, "south": { "texture": "#copper" }, "west": { "texture": "#copper" }, "east": { "texture": "#brass" }, "up": { "texture": "#brass" }, "down": { "texture": "#dark_copper" } }
+    },
+    {
+      "name": "post_se",
+      "from": [13, 2, 13],
+      "to": [15, 14, 15],
+      "faces": { "north": { "texture": "#brass" }, "south": { "texture": "#copper" }, "west": { "texture": "#brass" }, "east": { "texture": "#copper" }, "up": { "texture": "#brass" }, "down": { "texture": "#dark_copper" } }
+    }
+  ]
+}

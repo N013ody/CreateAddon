@@ -1,0 +1,193 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "minecraft:block/cut_copper",
+    "copper": "minecraft:block/cut_copper",
+    "dark_copper": "minecraft:block/weathered_cut_copper",
+    "brass": "minecraft:block/gold_block",
+    "andesite": "minecraft:block/andesite",
+    "dial": "minecraft:block/smooth_stone",
+    "mark": "minecraft:block/deepslate_tiles",
+    "glass": "minecraft:block/tinted_glass"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [60, -90, 0],
+      "translation": [0, 2, 1],
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [60, 90, 0],
+      "translation": [0, 2, 1],
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, -90, 25],
+      "translation": [1.13, 3.2, 1.13],
+      "scale": [0.68, 0.68, 0.68]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 90, -25],
+      "translation": [1.13, 3.2, 1.13],
+      "scale": [0.68, 0.68, 0.68]
+    },
+    "gui": {
+      "rotation": [30, 225, 0],
+      "translation": [0, 0, 0],
+      "scale": [0.9, 0.9, 0.9]
+    },
+    "ground": {
+      "translation": [0, 3, 0],
+      "scale": [0.45, 0.45, 0.45]
+    },
+    "fixed": {
+      "rotation": [0, 180, 0],
+      "scale": [0.8, 0.8, 0.8]
+    }
+  },
+  "elements": [
+    {
+      "name": "Handle",
+      "from": [7, 0, 7],
+      "to": [9, 9, 9],
+      "rotation": { "angle": -22.5, "axis": "z", "origin": [8, 7, 8] },
+      "faces": {
+        "down": { "texture": "#andesite" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#andesite" },
+        "south": { "texture": "#andesite" },
+        "west": { "texture": "#dark_copper" },
+        "east": { "texture": "#dark_copper" }
+      }
+    },
+    {
+      "name": "GripCap",
+      "from": [6.25, 0, 6.25],
+      "to": [9.75, 1.5, 9.75],
+      "rotation": { "angle": -22.5, "axis": "z", "origin": [8, 7, 8] },
+      "faces": {
+        "down": { "texture": "#dark_copper" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#dark_copper" },
+        "south": { "texture": "#dark_copper" },
+        "west": { "texture": "#dark_copper" },
+        "east": { "texture": "#dark_copper" }
+      }
+    },
+    {
+      "name": "HeadFrame",
+      "from": [4, 8, 4],
+      "to": [12, 16, 12],
+      "faces": {
+        "down": { "texture": "#dark_copper" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#copper" },
+        "south": { "texture": "#copper" },
+        "west": { "texture": "#copper" },
+        "east": { "texture": "#copper" }
+      }
+    },
+    {
+      "name": "DialFace",
+      "from": [5, 8.25, 5],
+      "to": [11, 8.5, 11],
+      "faces": {
+        "up": { "texture": "#dial" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "name": "GlassCover",
+      "from": [4.5, 8.55, 4.5],
+      "to": [11.5, 9, 11.5],
+      "faces": {
+        "up": { "texture": "#glass" },
+        "north": { "texture": "#glass" },
+        "south": { "texture": "#glass" },
+        "west": { "texture": "#glass" },
+        "east": { "texture": "#glass" }
+      }
+    },
+    {
+      "name": "Needle",
+      "from": [7.65, 9.05, 5.25],
+      "to": [8.35, 9.35, 8.5],
+      "rotation": { "angle": 45, "axis": "y", "origin": [8, 9.05, 8] },
+      "faces": {
+        "up": { "texture": "#mark" },
+        "north": { "texture": "#mark" },
+        "south": { "texture": "#mark" },
+        "west": { "texture": "#mark" },
+        "east": { "texture": "#mark" }
+      }
+    },
+    {
+      "name": "ClampLeft",
+      "from": [3, 10, 6.5],
+      "to": [4.5, 14, 9.5],
+      "faces": {
+        "down": { "texture": "#dark_copper" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#dark_copper" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "name": "ClampRight",
+      "from": [11.5, 10, 6.5],
+      "to": [13, 14, 9.5],
+      "faces": {
+        "down": { "texture": "#dark_copper" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#dark_copper" }
+      }
+    },
+    {
+      "name": "LinkProngA",
+      "from": [5.5, 15.5, 6.5],
+      "to": [6.75, 18, 9.5],
+      "faces": {
+        "down": { "texture": "#brass" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "name": "LinkProngB",
+      "from": [9.25, 15.5, 6.5],
+      "to": [10.5, 18, 9.5],
+      "faces": {
+        "down": { "texture": "#brass" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "name": "BridgeCoil",
+      "from": [6.5, 16.25, 7],
+      "to": [9.5, 17.25, 9],
+      "faces": {
+        "down": { "texture": "#dark_copper" },
+        "up": { "texture": "#dark_copper" },
+        "north": { "texture": "#dark_copper" },
+        "south": { "texture": "#dark_copper" },
+        "west": { "texture": "#dark_copper" },
+        "east": { "texture": "#dark_copper" }
+      }
+    }
+  ]
+}

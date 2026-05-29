@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "createaddon:block/closing_speed_sensor" }
+  }
+}

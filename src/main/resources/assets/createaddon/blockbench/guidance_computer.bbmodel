@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "guidance_computer",
+  "geometry_name": "guidance_computer",
+  "visible_box": [1, 1, 0],
+  "resolution": { "width": 16, "height": 16 },
+  "elements": [
+    { "name": "cut_copper_console", "from": [1, 0, 1], "to": [15, 12, 15], "color": 0 },
+    { "name": "kinetic_shaft_bus", "from": [0, 5, 6], "to": [16, 9, 10], "color": 2 },
+    { "name": "brass_screen_frame", "from": [3, 12, 3], "to": [13, 14, 13], "color": 1 },
+    { "name": "green_vector_screen", "from": [4, 14, 4], "to": [12, 14.5, 12], "color": 3 },
+    { "name": "left_warning_lamp", "from": [2, 12.1, 2], "to": [4, 12.4, 4], "color": 5 },
+    { "name": "right_warning_lamp", "from": [12, 12.1, 2], "to": [14, 12.4, 4], "color": 5 },
+    { "name": "brass_input_knob_a", "from": [3, 12.2, 11], "to": [5, 12.8, 13], "color": 1 },
+    { "name": "brass_input_knob_b", "from": [7, 12.2, 11], "to": [9, 12.8, 13], "color": 1 },
+    { "name": "brass_input_knob_c", "from": [11, 12.2, 11], "to": [13, 12.8, 13], "color": 1 }
+  ],
+  "outliner": ["cut_copper_console", "kinetic_shaft_bus", "brass_screen_frame", "green_vector_screen", "left_warning_lamp", "right_warning_lamp", "brass_input_knob_a", "brass_input_knob_b", "brass_input_knob_c"]
+}

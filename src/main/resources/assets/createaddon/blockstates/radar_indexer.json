@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "createaddon:block/radar_indexer" }
+  }
+}

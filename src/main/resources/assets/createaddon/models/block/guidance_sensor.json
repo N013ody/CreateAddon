@@ -1,0 +1,152 @@
+{
+  "credit": "Create: Guidance & Control sensor housing, authored in Blockbench/Minecraft block model format.",
+  "textures": {
+    "copper": "minecraft:block/cut_copper",
+    "dark_copper": "minecraft:block/weathered_cut_copper",
+    "brass": "minecraft:block/gold_block",
+    "andesite": "minecraft:block/andesite",
+    "dial": "minecraft:block/smooth_stone",
+    "mark": "minecraft:block/deepslate_tiles",
+    "pointer": "minecraft:block/deepslate_tiles",
+    "lamp": "minecraft:block/redstone_lamp_on",
+    "particle": "minecraft:block/cut_copper"
+  },
+  "elements": [
+    {
+      "from": [1, 0, 1],
+      "to": [15, 3, 15],
+      "faces": {
+        "down": { "texture": "#copper" },
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#copper" },
+        "south": { "texture": "#copper" },
+        "west": { "texture": "#copper" },
+        "east": { "texture": "#copper" }
+      }
+    },
+    {
+      "from": [4, 3, 4],
+      "to": [12, 14, 12],
+      "faces": {
+        "up": { "texture": "#brass" },
+        "down": { "texture": "#brass" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "from": [0, 3, 6],
+      "to": [16, 13, 10],
+      "faces": {
+        "up": { "texture": "#dark_copper" },
+        "down": { "texture": "#dark_copper" },
+        "north": { "texture": "#dark_copper" },
+        "south": { "texture": "#dark_copper" },
+        "west": { "texture": "#andesite" },
+        "east": { "texture": "#andesite" }
+      }
+    },
+    {
+      "from": [2, 5, 2],
+      "to": [14, 6, 14],
+      "faces": {
+        "up": { "texture": "#dark_copper" },
+        "down": { "texture": "#dark_copper" },
+        "north": { "texture": "#dark_copper" },
+        "south": { "texture": "#dark_copper" },
+        "west": { "texture": "#dark_copper" },
+        "east": { "texture": "#dark_copper" }
+      }
+    },
+    {
+      "from": [3, 6, 3],
+      "to": [13, 6.25, 13],
+      "faces": {
+        "up": { "texture": "#dial" },
+        "north": { "texture": "#dark_copper" },
+        "south": { "texture": "#dark_copper" },
+        "west": { "texture": "#dark_copper" },
+        "east": { "texture": "#dark_copper" }
+      }
+    },
+    {
+      "from": [7.25, 6.28, 3.5],
+      "to": [8.75, 6.55, 5],
+      "faces": {
+        "up": { "texture": "#mark" },
+        "north": { "texture": "#mark" },
+        "south": { "texture": "#mark" },
+        "west": { "texture": "#mark" },
+        "east": { "texture": "#mark" }
+      }
+    },
+    {
+      "from": [7.25, 6.28, 11],
+      "to": [8.75, 6.55, 12.5],
+      "faces": {
+        "up": { "texture": "#mark" },
+        "north": { "texture": "#mark" },
+        "south": { "texture": "#mark" },
+        "west": { "texture": "#mark" },
+        "east": { "texture": "#mark" }
+      }
+    },
+    {
+      "from": [3.5, 6.28, 7.25],
+      "to": [5, 6.55, 8.75],
+      "faces": {
+        "up": { "texture": "#mark" },
+        "north": { "texture": "#mark" },
+        "south": { "texture": "#mark" },
+        "west": { "texture": "#mark" },
+        "east": { "texture": "#mark" }
+      }
+    },
+    {
+      "from": [11, 6.28, 7.25],
+      "to": [12.5, 6.55, 8.75],
+      "faces": {
+        "up": { "texture": "#mark" },
+        "north": { "texture": "#mark" },
+        "south": { "texture": "#mark" },
+        "west": { "texture": "#mark" },
+        "east": { "texture": "#mark" }
+      }
+    },
+    {
+      "from": [7.55, 6.6, 4],
+      "to": [8.45, 6.9, 8.4],
+      "faces": {
+        "up": { "texture": "#pointer" },
+        "north": { "texture": "#pointer" },
+        "south": { "texture": "#pointer" },
+        "west": { "texture": "#pointer" },
+        "east": { "texture": "#pointer" }
+      }
+    },
+    {
+      "from": [7, 6.65, 7],
+      "to": [9, 7.1, 9],
+      "faces": {
+        "up": { "texture": "#brass" },
+        "north": { "texture": "#brass" },
+        "south": { "texture": "#brass" },
+        "west": { "texture": "#brass" },
+        "east": { "texture": "#brass" }
+      }
+    },
+    {
+      "from": [10.5, 6.35, 10.5],
+      "to": [12.5, 6.75, 12.5],
+      "faces": {
+        "up": { "texture": "#lamp" },
+        "north": { "texture": "#lamp" },
+        "south": { "texture": "#lamp" },
+        "west": { "texture": "#lamp" },
+        "east": { "texture": "#lamp" }
+      }
+    }
+  ]
+}
