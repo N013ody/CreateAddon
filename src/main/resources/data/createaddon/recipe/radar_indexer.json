@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "L": {
+      "item": "createaddon:basic_logic_chip"
+    },
+    "S": {
+      "item": "create:shaft"
+    }
+  },
+  "pattern": [
+    " E ",
+    "BLB",
+    "CSC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createaddon:radar_indexer"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createaddon:block/mill_arithmetic_block"
+    }
+  }
+}

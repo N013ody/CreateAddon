@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "create:brass_nugget"
+    }
+  ],
+  "result": {
+    "id": "createaddon:blank_punched_card",
+    "count": 2
+  }
+}

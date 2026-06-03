@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "SBS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "createaddon:silica_dust"
+    },
+    "B": {
+      "item": "createaddon:silicon_boule"
+    }
+  },
+  "result": {
+    "count": 4,
+    "id": "createaddon:rough_wafer"
+  }
+}

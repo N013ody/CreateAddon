@@ -114,5 +114,13 @@ gradle-app.setting
 # Common working directory
 run/
 
+# Local Codex/AI helper runtime caches. Keep small scripts in .codex-tools, but
+# do not upload bundled runtimes or extracted app caches.
+.codex-tools/jdk-21/
+.codex-tools/blockbench-asar/
+.codex-tools/blockbench-mcp-plugin/
+.codex-tools/blockbench-paths.json
+.codex-tools/temurin-jdk-21.zip
+
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar

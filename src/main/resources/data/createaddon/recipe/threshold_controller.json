@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "minecraft:comparator"
+    },
+    "L": {
+      "item": "createaddon:basic_logic_chip"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    " B ",
+    "RLR",
+    "BCB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createaddon:threshold_controller"
+  }
+}

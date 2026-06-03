@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SPS",
+    "ACA",
+    "TBT"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sand"
+    },
+    "P": {
+      "item": "create:mechanical_press"
+    },
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "C": {
+      "item": "create:brass_casing"
+    },
+    "T": {
+      "item": "createaddon:tin_ingot"
+    },
+    "B": {
+      "item": "create:basin"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "createaddon:wafer_polisher"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TET",
+    "CBC",
+    "TBT"
+  ],
+  "key": {
+    "T": {
+      "item": "createaddon:tungsten_ingot"
+    },
+    "E": {
+      "item": "create:encased_fan"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "B": {
+      "item": "create:blaze_burner"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "createaddon:oxidation_diffusion_furnace"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "minecraft:compass"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "L": {
+      "item": "createaddon:basic_logic_chip"
+    },
+    "S": {
+      "item": "create:shaft"
+    }
+  },
+  "pattern": [
+    " E ",
+    "BLB",
+    "CSC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createaddon:relative_velocity_vector_sensor"
+  }
+}

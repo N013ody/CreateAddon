@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TST",
+    "ACA",
+    "TPT"
+  ],
+  "key": {
+    "T": {
+      "item": "createaddon:tungsten_ingot"
+    },
+    "S": {
+      "item": "create:mechanical_saw"
+    },
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "C": {
+      "item": "create:copper_casing"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "createaddon:wafer_saw"
+  }
+}

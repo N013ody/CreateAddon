@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createaddon:block/difference_register_column"
+    }
+  }
+}

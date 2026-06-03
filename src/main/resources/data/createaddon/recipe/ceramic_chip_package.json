@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "T T",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:brick"
+    },
+    "T": {
+      "item": "createaddon:tin_ingot"
+    }
+  },
+  "result": {
+    "count": 4,
+    "id": "createaddon:ceramic_chip_package"
+  }
+}

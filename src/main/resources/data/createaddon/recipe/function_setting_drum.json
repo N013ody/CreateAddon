@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " B ",
+    "ACA",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "create:brass_ingot"
+    },
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "C": {
+      "item": "create:shaft"
+    }
+  },
+  "result": {
+    "id": "createaddon:function_setting_drum",
+    "count": 1
+  }
+}

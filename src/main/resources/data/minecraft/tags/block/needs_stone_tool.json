@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "createaddon:tin_ore",
+    "createaddon:deepslate_tin_ore",
+    "createaddon:testblock",
+    "createaddon:guidance_computer",
+    "createaddon:relative_bearing_sensor",
+    "createaddon:closing_speed_sensor",
+    "createaddon:terrain_altimeter",
+    "createaddon:inertial_drift_sensor",
+    "createaddon:lock_on_probability_sensor",
+    "createaddon:structural_stress_sensor",
+    "createaddon:relative_velocity_vector_sensor",
+    "createaddon:laser_range_finder",
+    "createaddon:radar_indexer",
+    "createaddon:threshold_controller",
+    "createaddon:rotary_frame"
+  ]
+}

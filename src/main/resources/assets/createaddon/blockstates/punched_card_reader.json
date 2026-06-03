@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createaddon:block/punched_card_reader"
+    }
+  }
+}

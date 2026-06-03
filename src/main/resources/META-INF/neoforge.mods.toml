@@ -26,14 +26,14 @@ side = "BOTH"
 [[dependencies."${mod_id}"]]
 modId = "create"
 type = "required"
-versionRange = "[${create_mod_version},)"
+versionRange = "${create_version_range}"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies."${mod_id}"]]
 modId = "flywheel"
 type = "required"
-versionRange = "[${flywheel_mod_version},)"
+versionRange = "${flywheel_version_range}"
 ordering = "AFTER"
 side = "CLIENT"
 

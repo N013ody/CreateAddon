@@ -1,0 +1,13 @@
+{
+  "type": "create:sandpaper_polishing",
+  "ingredients": [
+    {
+      "item": "createaddon:rough_wafer"
+    }
+  ],
+  "results": [
+    {
+      "id": "createaddon:polished_wafer"
+    }
+  ]
+}

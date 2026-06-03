@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " T ",
+    "TWT",
+    " T "
+  ],
+  "key": {
+    "T": {
+      "item": "createaddon:tungsten_ingot"
+    },
+    "W": {
+      "item": "createaddon:finished_wafer"
+    }
+  },
+  "result": {
+    "count": 8,
+    "id": "createaddon:bare_logic_die"
+  }
+}

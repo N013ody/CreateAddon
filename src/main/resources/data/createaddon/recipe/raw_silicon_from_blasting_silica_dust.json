@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "raw_silicon",
+  "ingredient": {
+    "item": "createaddon:silica_dust"
+  },
+  "result": {
+    "id": "createaddon:raw_silicon"
+  }
+}

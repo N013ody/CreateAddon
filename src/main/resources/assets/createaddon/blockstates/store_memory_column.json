@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createaddon:block/store_memory_column"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " R ",
+    "RTR",
+    " R "
+  ],
+  "key": {
+    "R": {
+      "item": "createaddon:raw_silicon"
+    },
+    "T": {
+      "item": "createaddon:tungsten_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "createaddon:silicon_boule"
+  }
+}

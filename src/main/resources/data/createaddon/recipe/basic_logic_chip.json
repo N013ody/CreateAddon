@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " T ",
+    "PDP",
+    " R "
+  ],
+  "key": {
+    "T": {
+      "item": "createaddon:tin_ingot"
+    },
+    "P": {
+      "item": "createaddon:ceramic_chip_package"
+    },
+    "D": {
+      "item": "createaddon:bare_logic_die"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "createaddon:basic_logic_chip"
+  }
+}

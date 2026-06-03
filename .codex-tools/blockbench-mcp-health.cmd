@@ -1,0 +1,3 @@
+@echo off
+setlocal
+curl.exe -fsS "http://127.0.0.1:3000/bb-mcp/health"

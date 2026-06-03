@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createaddon:block/wafer_saw"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:quartz"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "createaddon:silica_dust",
+      "count": 2
+    }
+  ]
+}
