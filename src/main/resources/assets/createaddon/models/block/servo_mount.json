@@ -1,0 +1,15 @@
+{
+  "credit": "Servo Mount",
+  "textures": {
+    "casing": "createaddon:block/precision_casing",
+    "dark": "createaddon:block/dark_mechanism",
+    "brass": "createaddon:block/brass_trim",
+    "lamp": "createaddon:block/cyan_lamp",
+    "particle": "createaddon:block/precision_casing"
+  },
+  "elements": [
+    { "name": "base", "from": [2, 0, 2], "to": [14, 4, 14], "faces": { "down": { "texture": "#dark" }, "up": { "texture": "#casing" }, "north": { "texture": "#casing" }, "south": { "texture": "#casing" }, "west": { "texture": "#casing" }, "east": { "texture": "#casing" } } },
+    { "name": "servo", "from": [4, 4.001, 4], "to": [12, 9, 12], "faces": { "up": { "texture": "#brass" }, "north": { "texture": "#dark" }, "south": { "texture": "#dark" }, "west": { "texture": "#dark" }, "east": { "texture": "#dark" } } },
+    { "name": "indicator", "from": [6, 9.001, 6], "to": [10, 10, 10], "faces": { "up": { "texture": "#lamp" }, "north": { "texture": "#lamp" }, "south": { "texture": "#lamp" }, "west": { "texture": "#lamp" }, "east": { "texture": "#lamp" } } }
+  ]
+}

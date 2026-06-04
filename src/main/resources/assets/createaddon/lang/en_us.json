@@ -272,5 +272,16 @@
   "message.createaddon.computation.started_card": "Analytical engine started compiling a machine calibration card",
   "message.createaddon.computation.busy": "The computation assembly is still processing, or its output is waiting",
   "message.createaddon.computation.empty": "No computation output is ready",
-  "message.createaddon.computation.extracted": "Retrieved: %s"
+  "message.createaddon.computation.extracted": "Retrieved: %s",
+
+  "block.createaddon.guidance_controller": "Guidance Controller",
+  "block.createaddon.guidance_controller.tooltip.summary": "A kinetic command relay that reads flight-control commands from a Guidance Computer and broadcasts them to nearby Servo Mounts.",
+  "block.createaddon.guidance_controller.tooltip.condition1": "Requires rotation",
+  "block.createaddon.guidance_controller.tooltip.behaviour1": "Must receive rotational speed to function. When unpowered, all output commands are zero.",
+  "block.createaddon.servo_mount": "Servo Mount",
+  "block.createaddon.servo_mount.tooltip.summary": "A mechanical actuator mount that reads a command channel and directly drives the angle of an adjacent bearing or the offset of an adjacent piston.",
+  "block.createaddon.servo_mount.tooltip.condition1": "Right-click",
+  "block.createaddon.servo_mount.tooltip.behaviour1": "Cycle through command channels: Rudder, Elevator, Throttle.",
+  "block.createaddon.servo_mount.tooltip.condition2": "Sneak + Right-click",
+  "block.createaddon.servo_mount.tooltip.behaviour2": "Cycle angle range preset or toggle signal inversion."
 }

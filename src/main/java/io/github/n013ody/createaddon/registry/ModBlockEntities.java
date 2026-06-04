@@ -1,6 +1,8 @@
 package io.github.n013ody.createaddon.registry;
 
 import io.github.n013ody.createaddon.CreateAddon;
+import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlockEntity;
+import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlockEntity;
 import io.github.n013ody.createaddon.content.TestBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.computer.GuidanceComputerBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.sensor.ClosingSpeedSensorBlockEntity;
@@ -67,6 +69,12 @@ public class ModBlockEntities {
                     ModBlocks.PACKAGING_TEST_BENCH.get(),
                     ModBlocks.TABLE_PRINTER.get(),
                     ModBlocks.MECHANICAL_PRINTER.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GuidanceControllerBlockEntity>> GUIDANCE_CONTROLLER = BLOCK_ENTITIES.register("guidance_controller",
+            () -> BlockEntityType.Builder.of(GuidanceControllerBlockEntity::new, ModBlocks.GUIDANCE_CONTROLLER.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ServoMountBlockEntity>> SERVO_MOUNT = BLOCK_ENTITIES.register("servo_mount",
+            () -> BlockEntityType.Builder.of(ServoMountBlockEntity::new, ModBlocks.SERVO_MOUNT.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

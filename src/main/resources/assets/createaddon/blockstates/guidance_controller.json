@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": { "model": "createaddon:block/guidance_controller", "z": 90 },
+    "axis=y": { "model": "createaddon:block/guidance_controller" },
+    "axis=z": { "model": "createaddon:block/guidance_controller", "x": 90 }
+  }
+}

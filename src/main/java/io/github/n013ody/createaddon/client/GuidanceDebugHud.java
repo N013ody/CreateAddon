@@ -5,6 +5,8 @@ import java.util.Map;
 import io.github.n013ody.createaddon.CreateAddon;
 import io.github.n013ody.createaddon.content.guidance.api.SensorReading;
 import io.github.n013ody.createaddon.content.guidance.computer.GuidanceComputerBlockEntity;
+import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlockEntity;
+import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.sensor.AbstractSensorBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.sensor.LaserRangeFinderBlockEntity;
 
@@ -40,6 +42,14 @@ public final class GuidanceDebugHud {
         BlockEntity blockEntity = minecraft.level.getBlockEntity(hit.getBlockPos());
         if (blockEntity instanceof GuidanceComputerBlockEntity computer) {
             renderComputer(graphics, computer, 8, 8);
+            return;
+        }
+        if (blockEntity instanceof GuidanceControllerBlockEntity controller) {
+            renderController(graphics, controller, 8, 8);
+            return;
+        }
+        if (blockEntity instanceof ServoMountBlockEntity servo) {
+            renderServoMount(graphics, servo, 8, 8);
             return;
         }
         if (blockEntity instanceof AbstractSensorBlockEntity<?> sensor)
@@ -105,6 +115,37 @@ public final class GuidanceDebugHud {
         y += 10;
         drawLine(graphics, x, y, Component.translatable("gui.createaddon.guidance_debug.velocity", format(sensor.getSelfVelocity().x),
                 format(sensor.getSelfVelocity().y), format(sensor.getSelfVelocity().z)));
+    }
+
+    private static void renderController(GuiGraphics graphics, GuidanceControllerBlockEntity controller, int x, int y) {
+        drawLine(graphics, x, y, Component.literal("Guidance Controller").withStyle(ChatFormatting.GOLD));
+        y += 10;
+        drawLine(graphics, x, y, Component.literal("source: " + controller.getInputSourceType()
+                + "  speed: " + format(controller.getSpeed())
+                + "  active: " + controller.isActive()).withStyle(controller.isActive() ? ChatFormatting.GREEN : ChatFormatting.RED));
+        y += 10;
+        drawLine(graphics, x, y, Component.literal("rudder: " + format(controller.getRudderCommand())
+                + "  elevator: " + format(controller.getElevatorCommand())
+                + "  throttle: " + format(controller.getThrottleCommand())).withStyle(ChatFormatting.GRAY));
+    }
+
+    private static void renderServoMount(GuiGraphics graphics, ServoMountBlockEntity servo, int x, int y) {
+        drawLine(graphics, x, y, Component.literal("Servo Mount").withStyle(ChatFormatting.GOLD));
+        y += 10;
+        drawLine(graphics, x, y, Component.literal("channel: " + servo.getChannel().displayName()
+                + "  target: " + servo.getTargetType().name()
+                + "  active: " + servo.isActive()).withStyle(servo.isActive() ? ChatFormatting.GREEN : ChatFormatting.RED));
+        y += 10;
+        String rangeStr = servo.getTargetType() == ServoMountBlockEntity.TargetType.LINEAR
+                ? format(servo.getLinearRange()) + " blocks"
+                : "±" + format(servo.getAngleRange()) + "°";
+        drawLine(graphics, x, y, Component.literal("range: " + rangeStr
+                + "  inverted: " + servo.isInverted()).withStyle(ChatFormatting.GRAY));
+        y += 10;
+        String valueStr = servo.getTargetType() == ServoMountBlockEntity.TargetType.LINEAR
+                ? "offset: " + format(servo.getCurrentOffset())
+                : "angle: " + format(servo.getCurrentAngle());
+        drawLine(graphics, x, y, Component.literal(valueStr).withStyle(ChatFormatting.AQUA));
     }
 
     private static void drawLine(GuiGraphics graphics, int x, int y, Component text) {

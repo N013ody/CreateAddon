@@ -96,6 +96,8 @@ public final class CreateAddonClient {
         registerTooltip(ModBlocks.RADAR_INDEXER_ITEM.get());
         registerTooltip(ModBlocks.THRESHOLD_CONTROLLER_ITEM.get());
         registerTooltip(ModBlocks.ROTARY_FRAME_ITEM.get());
+        registerTooltip(ModBlocks.GUIDANCE_CONTROLLER_ITEM.get());
+        registerTooltip(ModBlocks.SERVO_MOUNT_ITEM.get());
         registerTooltip(ModBlocks.SENSOR_BINDER.get());
     }
 

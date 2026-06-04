@@ -70,6 +70,8 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.RADAR_INDEXER_ITEM.get());
                         output.accept(ModBlocks.THRESHOLD_CONTROLLER_ITEM.get());
                         output.accept(ModBlocks.ROTARY_FRAME_ITEM.get());
+                        output.accept(ModBlocks.GUIDANCE_CONTROLLER_ITEM.get());
+                        output.accept(ModBlocks.SERVO_MOUNT_ITEM.get());
                     })
                     .build());
 

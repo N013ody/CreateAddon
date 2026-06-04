@@ -4,6 +4,8 @@ import io.github.n013ody.createaddon.CreateAddon;
 import io.github.n013ody.createaddon.content.TestBlock;
 import io.github.n013ody.createaddon.content.computation.ComputingAssemblyBlock;
 import io.github.n013ody.createaddon.content.guidance.computer.GuidanceComputerBlock;
+import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlock;
+import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlock;
 import io.github.n013ody.createaddon.content.guidance.sensor.ClosingSpeedSensorBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.sensor.GuidanceSensorBlock;
 import io.github.n013ody.createaddon.content.guidance.sensor.InertialDriftSensorBlockEntity;
@@ -239,6 +241,26 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
     public static final DeferredItem<BlockItem> ROTARY_FRAME_ITEM = ITEMS.register("rotary_frame",
             () -> new BlockItem(ROTARY_FRAME.get(), new Item.Properties()));
+
+    public static final DeferredBlock<GuidanceControllerBlock> GUIDANCE_CONTROLLER = BLOCKS.register("guidance_controller",
+            () -> new GuidanceControllerBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.COPPER)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
+    public static final DeferredItem<BlockItem> GUIDANCE_CONTROLLER_ITEM = ITEMS.register("guidance_controller",
+            () -> new BlockItem(GUIDANCE_CONTROLLER.get(), new Item.Properties()));
+
+    public static final DeferredBlock<ServoMountBlock> SERVO_MOUNT = BLOCKS.register("servo_mount",
+            () -> new ServoMountBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.COPPER)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
+    public static final DeferredItem<BlockItem> SERVO_MOUNT_ITEM = ITEMS.register("servo_mount",
+            () -> new BlockItem(SERVO_MOUNT.get(), new Item.Properties()));
 
     public static final DeferredItem<SensorBinderItem> SENSOR_BINDER = ITEMS.register("sensor_binder",
             () -> new SensorBinderItem(new Item.Properties().stacksTo(1)));

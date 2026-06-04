@@ -1,0 +1,17 @@
+{
+  "credit": "Guidance Controller",
+  "textures": {
+    "casing": "createaddon:block/precision_casing",
+    "top": "createaddon:block/precision_casing_top",
+    "panel": "createaddon:block/precision_panel",
+    "dark": "createaddon:block/dark_mechanism",
+    "brass": "createaddon:block/brass_trim",
+    "lamp": "createaddon:block/cyan_lamp",
+    "particle": "createaddon:block/precision_casing"
+  },
+  "elements": [
+    { "name": "main_body", "from": [1, 0, 1], "to": [15, 10, 15], "faces": { "down": { "texture": "#dark" }, "up": { "texture": "#top" }, "north": { "texture": "#casing" }, "south": { "texture": "#casing" }, "west": { "texture": "#casing" }, "east": { "texture": "#casing" } } },
+    { "name": "top_console", "from": [3, 10.001, 3], "to": [13, 13, 13], "faces": { "up": { "texture": "#panel" }, "north": { "texture": "#brass" }, "south": { "texture": "#brass" }, "west": { "texture": "#brass" }, "east": { "texture": "#brass" } } },
+    { "name": "indicator", "from": [6, 13.001, 6], "to": [10, 14, 10], "faces": { "up": { "texture": "#lamp" }, "north": { "texture": "#lamp" }, "south": { "texture": "#lamp" }, "west": { "texture": "#lamp" }, "east": { "texture": "#lamp" } } }
+  ]
+}

@@ -269,5 +269,16 @@
   "message.createaddon.computation.started_card": "分析机开始编译机器校准卡",
   "message.createaddon.computation.busy": "计算组件正在处理，或产物还未取出",
   "message.createaddon.computation.empty": "没有可取出的计算产物",
-  "message.createaddon.computation.extracted": "已取出：%s"
+  "message.createaddon.computation.extracted": "已取出：%s",
+
+  "block.createaddon.guidance_controller": "制导控制器",
+  "block.createaddon.guidance_controller.tooltip.summary": "动能指令中继，从制导计算机读取飞控指令，广播给附近的伺服底座。",
+  "block.createaddon.guidance_controller.tooltip.condition1": "需要旋转",
+  "block.createaddon.guidance_controller.tooltip.behaviour1": "必须接收转速才能工作。无动力时所有输出指令归零。",
+  "block.createaddon.servo_mount": "伺服底座",
+  "block.createaddon.servo_mount.tooltip.summary": "机械执行器底座，读取指令通道并直接驱动相邻轴承角度或活塞偏移。",
+  "block.createaddon.servo_mount.tooltip.condition1": "右击",
+  "block.createaddon.servo_mount.tooltip.behaviour1": "切换指令通道：方向舵、升降舵、油门。",
+  "block.createaddon.servo_mount.tooltip.condition2": "潜行 + 右击",
+  "block.createaddon.servo_mount.tooltip.behaviour2": "切换角度范围预设或切换信号反转。"
 }
