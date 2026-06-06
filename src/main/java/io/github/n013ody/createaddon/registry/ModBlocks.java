@@ -3,6 +3,7 @@ package io.github.n013ody.createaddon.registry;
 import io.github.n013ody.createaddon.CreateAddon;
 import io.github.n013ody.createaddon.content.TestBlock;
 import io.github.n013ody.createaddon.content.computation.ComputingAssemblyBlock;
+import io.github.n013ody.createaddon.content.computation.ComputingBlockItem;
 import io.github.n013ody.createaddon.content.guidance.computer.GuidanceComputerBlock;
 import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlock;
 import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlock;
@@ -20,6 +21,8 @@ import io.github.n013ody.createaddon.content.guidance.sensor.RadarIndexerBlockEn
 import io.github.n013ody.createaddon.content.guidance.frame.RotaryFrameBlock;
 import io.github.n013ody.createaddon.content.guidance.link.SensorBinderItem;
 import io.github.n013ody.createaddon.content.guidance.threshold.ThresholdControllerBlock;
+import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlock;
+import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlock;
 import io.github.n013ody.createaddon.content.semiconductor.ChipMachineBlock;
 import io.github.n013ody.createaddon.content.semiconductor.CrystalPullFurnaceBlock;
 import io.github.n013ody.createaddon.content.semiconductor.OxidationDiffusionFurnaceBlock;
@@ -141,8 +144,10 @@ public class ModBlocks {
                     "message.createaddon.computation.started_table",
                     List.of(
                             new ComputingAssemblyBlock.ComponentRequirement(FUNCTION_SETTING_DRUM, 1,
+                                    30,
                                     "block.createaddon.function_setting_drum"),
                             new ComputingAssemblyBlock.ComponentRequirement(DIFFERENCE_REGISTER_COLUMN, 2,
+                                    20,
                                     "block.createaddon.difference_register_column"))));
 
     public static final DeferredBlock<Block> PUNCHED_CARD_READER = registerComputationBlock("punched_card_reader");
@@ -153,19 +158,22 @@ public class ModBlocks {
                     "message.createaddon.computation.started_card",
                     List.of(
                             new ComputingAssemblyBlock.ComponentRequirement(PUNCHED_CARD_READER, 1,
+                                    25,
                                     "block.createaddon.punched_card_reader"),
                             new ComputingAssemblyBlock.ComponentRequirement(MILL_ARITHMETIC_BLOCK, 1,
+                                    40,
                                     "block.createaddon.mill_arithmetic_block"),
                             new ComputingAssemblyBlock.ComponentRequirement(STORE_MEMORY_COLUMN, 1,
+                                    30,
                                     "block.createaddon.store_memory_column"))));
 
-    public static final DeferredItem<BlockItem> FUNCTION_SETTING_DRUM_ITEM = registerMachineItem("function_setting_drum", FUNCTION_SETTING_DRUM);
-    public static final DeferredItem<BlockItem> DIFFERENCE_REGISTER_COLUMN_ITEM = registerMachineItem("difference_register_column", DIFFERENCE_REGISTER_COLUMN);
-    public static final DeferredItem<BlockItem> TABLE_PRINTER_ITEM = registerMachineItem("table_printer", TABLE_PRINTER);
-    public static final DeferredItem<BlockItem> PUNCHED_CARD_READER_ITEM = registerMachineItem("punched_card_reader", PUNCHED_CARD_READER);
-    public static final DeferredItem<BlockItem> MILL_ARITHMETIC_BLOCK_ITEM = registerMachineItem("mill_arithmetic_block", MILL_ARITHMETIC_BLOCK);
-    public static final DeferredItem<BlockItem> STORE_MEMORY_COLUMN_ITEM = registerMachineItem("store_memory_column", STORE_MEMORY_COLUMN);
-    public static final DeferredItem<BlockItem> MECHANICAL_PRINTER_ITEM = registerMachineItem("mechanical_printer", MECHANICAL_PRINTER);
+    public static final DeferredItem<BlockItem> FUNCTION_SETTING_DRUM_ITEM = registerComputingItem("function_setting_drum", FUNCTION_SETTING_DRUM);
+    public static final DeferredItem<BlockItem> DIFFERENCE_REGISTER_COLUMN_ITEM = registerComputingItem("difference_register_column", DIFFERENCE_REGISTER_COLUMN);
+    public static final DeferredItem<BlockItem> TABLE_PRINTER_ITEM = registerComputingItem("table_printer", TABLE_PRINTER);
+    public static final DeferredItem<BlockItem> PUNCHED_CARD_READER_ITEM = registerComputingItem("punched_card_reader", PUNCHED_CARD_READER);
+    public static final DeferredItem<BlockItem> MILL_ARITHMETIC_BLOCK_ITEM = registerComputingItem("mill_arithmetic_block", MILL_ARITHMETIC_BLOCK);
+    public static final DeferredItem<BlockItem> STORE_MEMORY_COLUMN_ITEM = registerComputingItem("store_memory_column", STORE_MEMORY_COLUMN);
+    public static final DeferredItem<BlockItem> MECHANICAL_PRINTER_ITEM = registerComputingItem("mechanical_printer", MECHANICAL_PRINTER);
 
     public static final DeferredBlock<TestBlock> TESTBLOCK = BLOCKS.register("testblock",
             () -> new TestBlock(BlockBehaviour.Properties.of()
@@ -265,6 +273,26 @@ public class ModBlocks {
     public static final DeferredItem<SensorBinderItem> SENSOR_BINDER = ITEMS.register("sensor_binder",
             () -> new SensorBinderItem(new Item.Properties().stacksTo(1)));
 
+    public static final DeferredBlock<GuidanceControllerBlock> GUIDANCE_CONTROLLER = BLOCKS.register("guidance_controller",
+            () -> new GuidanceControllerBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.COPPER)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
+    public static final DeferredItem<BlockItem> GUIDANCE_CONTROLLER_ITEM = ITEMS.register("guidance_controller",
+            () -> new BlockItem(GUIDANCE_CONTROLLER.get(), new Item.Properties()));
+
+    public static final DeferredBlock<ServoMountBlock> SERVO_MOUNT = BLOCKS.register("servo_mount",
+            () -> new ServoMountBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .strength(2.0F, 6.0F)
+                    .sound(SoundType.COPPER)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()));
+    public static final DeferredItem<BlockItem> SERVO_MOUNT_ITEM = ITEMS.register("servo_mount",
+            () -> new BlockItem(SERVO_MOUNT.get(), new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
@@ -306,5 +334,10 @@ public class ModBlocks {
     private static DeferredItem<BlockItem> registerMachineItem(String name, DeferredBlock<? extends Block> block) {
         return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
+
+    private static DeferredItem<BlockItem> registerComputingItem(String name, DeferredBlock<? extends Block> block) {
+        return ITEMS.register(name, () -> new ComputingBlockItem(block.get(), new Item.Properties()));
+    }
 }
+
 

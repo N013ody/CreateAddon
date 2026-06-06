@@ -36,7 +36,7 @@ public class ThresholdControllerManager {
                     net.minecraft.network.chat.Component.translatable("message.createaddon.threshold.set", String.valueOf(value)), true);
         } catch (NumberFormatException e) {
             player.displayClientMessage(
-                    net.minecraft.network.chat.Component.literal("搂cInvalid number"), true);
+                    net.minecraft.network.chat.Component.literal("Invalid number"), true);
         }
     }
 }

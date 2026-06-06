@@ -4,6 +4,7 @@ import io.github.n013ody.createaddon.CreateAddon;
 import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlockEntity;
 import io.github.n013ody.createaddon.content.TestBlockEntity;
+import io.github.n013ody.createaddon.content.computation.ComputingMachineBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.computer.GuidanceComputerBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.sensor.ClosingSpeedSensorBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.sensor.InertialDriftSensorBlockEntity;
@@ -16,6 +17,8 @@ import io.github.n013ody.createaddon.content.guidance.sensor.LaserRangeFinderBlo
 import io.github.n013ody.createaddon.content.guidance.sensor.RadarIndexerBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.frame.RotaryFrameBlockEntity;
 import io.github.n013ody.createaddon.content.guidance.threshold.ThresholdControllerBlockEntity;
+import io.github.n013ody.createaddon.content.guidance.controller.GuidanceControllerBlockEntity;
+import io.github.n013ody.createaddon.content.guidance.controller.ServoMountBlockEntity;
 import io.github.n013ody.createaddon.content.semiconductor.ChipMachineBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -66,7 +69,10 @@ public class ModBlockEntities {
                     ModBlocks.WAFER_POLISHER.get(),
                     ModBlocks.OXIDATION_DIFFUSION_FURNACE.get(),
                     ModBlocks.PHOTOLITHOGRAPHY_TABLE.get(),
-                    ModBlocks.PACKAGING_TEST_BENCH.get(),
+                    ModBlocks.PACKAGING_TEST_BENCH.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ComputingMachineBlockEntity>> COMPUTING_MACHINE = BLOCK_ENTITIES.register("computing_machine",
+            () -> BlockEntityType.Builder.of(ComputingMachineBlockEntity::new,
                     ModBlocks.TABLE_PRINTER.get(),
                     ModBlocks.MECHANICAL_PRINTER.get()).build(null));
 
@@ -80,4 +86,5 @@ public class ModBlockEntities {
         BLOCK_ENTITIES.register(eventBus);
     }
 }
+
 

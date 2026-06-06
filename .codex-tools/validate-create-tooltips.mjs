@@ -35,6 +35,10 @@ for (const match of modBlocks.matchAll(/DeferredItem<BlockItem>\s+([A-Z0-9_]+)\s
   registry.set(match[1], { type: 'block', id: match[2] });
 }
 
+for (const match of modBlocks.matchAll(/DeferredItem<BlockItem>\s+([A-Z0-9_]+)\s*=\s*registerComputingItem\("([^"]+)"/g)) {
+  registry.set(match[1], { type: 'block', id: match[2] });
+}
+
 const acceptedConstants = [...creativeTabs.matchAll(/output\.accept\(ModBlocks\.([A-Z0-9_]+)\.get\(\)\)/g)]
   .map((match) => match[1]);
 
@@ -45,7 +49,8 @@ for (const constantName of acceptedConstants) {
   assert(entry, `No registry entry found for creative tab constant ${constantName}`);
 
   assert(
-    client.includes(`registerTooltip(ModBlocks.${constantName}.get())`),
+    client.includes(`registerTooltip(ModBlocks.${constantName}.get())`)
+      || client.includes(`registerBlockTooltip(ModBlocks.${constantName}.get()`),
     `Create tooltip not registered for ${constantName}`,
   );
 

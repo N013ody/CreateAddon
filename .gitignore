@@ -119,6 +119,7 @@ run/
 .codex-tools/jdk-21/
 .codex-tools/blockbench-asar/
 .codex-tools/blockbench-mcp-plugin/
+.codex-tools/create-source/
 .codex-tools/blockbench-paths.json
 .codex-tools/temurin-jdk-21.zip
 

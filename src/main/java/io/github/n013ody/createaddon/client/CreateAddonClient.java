@@ -40,6 +40,10 @@ public final class CreateAddonClient {
         event.registerBlockEntityRenderer(ModBlockEntities.RELATIVE_VELOCITY_VECTOR_SENSOR.get(), SensorDialBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.LASER_RANGE_FINDER.get(), SensorDialBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.RADAR_INDEXER.get(), SensorDialBlockEntityRenderer::new);
+        // ¿ØÖÆÆ÷äÖÈ¾Æ÷
+        event.registerBlockEntityRenderer(ModBlockEntities.GUIDANCE_CONTROLLER.get(), GuidanceControllerRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.SERVO_MOUNT.get(), ServoMountRenderer::new);
+
         event.registerBlockEntityRenderer(ModBlockEntities.ROTARY_FRAME.get(), RotaryFrameBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.CHIP_MACHINE.get(), ChipMachineBlockEntityRenderer::new);
     }
@@ -76,13 +80,13 @@ public final class CreateAddonClient {
         registerTooltip(ModBlocks.BASIC_PROCESSING_CURVE_TABLE.get());
         registerTooltip(ModBlocks.BLANK_PUNCHED_CARD.get());
         registerTooltip(ModBlocks.MACHINE_CALIBRATION_CARD.get());
-        registerTooltip(ModBlocks.FUNCTION_SETTING_DRUM_ITEM.get());
-        registerTooltip(ModBlocks.DIFFERENCE_REGISTER_COLUMN_ITEM.get());
-        registerTooltip(ModBlocks.TABLE_PRINTER_ITEM.get());
-        registerTooltip(ModBlocks.PUNCHED_CARD_READER_ITEM.get());
-        registerTooltip(ModBlocks.MILL_ARITHMETIC_BLOCK_ITEM.get());
-        registerTooltip(ModBlocks.STORE_MEMORY_COLUMN_ITEM.get());
-        registerTooltip(ModBlocks.MECHANICAL_PRINTER_ITEM.get());
+        registerBlockTooltip(ModBlocks.FUNCTION_SETTING_DRUM_ITEM.get(), "block.createaddon.function_setting_drum");
+        registerBlockTooltip(ModBlocks.DIFFERENCE_REGISTER_COLUMN_ITEM.get(), "block.createaddon.difference_register_column");
+        registerBlockTooltip(ModBlocks.TABLE_PRINTER_ITEM.get(), "block.createaddon.table_printer");
+        registerBlockTooltip(ModBlocks.PUNCHED_CARD_READER_ITEM.get(), "block.createaddon.punched_card_reader");
+        registerBlockTooltip(ModBlocks.MILL_ARITHMETIC_BLOCK_ITEM.get(), "block.createaddon.mill_arithmetic_block");
+        registerBlockTooltip(ModBlocks.STORE_MEMORY_COLUMN_ITEM.get(), "block.createaddon.store_memory_column");
+        registerBlockTooltip(ModBlocks.MECHANICAL_PRINTER_ITEM.get(), "block.createaddon.mechanical_printer");
         registerTooltip(ModBlocks.TESTBLOCK_ITEM.get());
         registerTooltip(ModBlocks.GUIDANCE_COMPUTER_ITEM.get());
         registerTooltip(ModBlocks.RELATIVE_BEARING_SENSOR_ITEM.get());
@@ -104,5 +108,11 @@ public final class CreateAddonClient {
     private static void registerTooltip(net.minecraft.world.item.Item item) {
         TooltipModifier.REGISTRY.register(item, new ItemDescription.Modifier(item, Palette.STANDARD_CREATE));
     }
+
+    private static void registerBlockTooltip(net.minecraft.world.item.Item item, String blockDescriptionId) {
+        ItemDescription.useKey(item, () -> blockDescriptionId);
+        registerTooltip(item);
+    }
 }
+
 

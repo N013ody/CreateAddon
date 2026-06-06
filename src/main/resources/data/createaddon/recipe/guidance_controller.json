@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "C": {
+      "item": "create:brass_sheet"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "CEC",
+    "RBR",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "createaddon:guidance_controller"
+  }
+}

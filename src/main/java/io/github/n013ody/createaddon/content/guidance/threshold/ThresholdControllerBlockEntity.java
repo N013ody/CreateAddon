@@ -156,7 +156,7 @@ public class ThresholdControllerBlockEntity extends SmartBlockEntity {
             if (ThresholdControllerManager.isPending(player)) {
                 ThresholdControllerManager.markPending(player, worldPosition);
                 player.displayClientMessage(
-                        Component.literal("搂eType a number in chat to set threshold (current: " + threshold + ")"), true);
+                        Component.literal("Type a number in chat to set threshold (current: " + threshold + ")"), true);
                 return InteractionResult.SUCCESS;
             }
 
@@ -182,9 +182,9 @@ public class ThresholdControllerBlockEntity extends SmartBlockEntity {
             player.displayClientMessage(
                     Component.translatable("message.createaddon.threshold.sensor", selectedSensorId), true);
             player.displayClientMessage(
-                    Component.literal("搂7Operator: " + compareOp.symbol + " | Threshold: " + threshold + " | Sneak+RMB to change op"), true);
+                    Component.literal("�?Operator: " + compareOp.symbol + " | Threshold: " + threshold + " | Sneak+RMB to change op"), true);
             player.displayClientMessage(
-                    Component.literal("搂eSend a number in chat to set threshold"), true);
+                    Component.literal("Send a number in chat to set threshold"), true);
             ThresholdControllerManager.markPending(player, worldPosition);
         }
 
@@ -276,4 +276,6 @@ public class ThresholdControllerBlockEntity extends SmartBlockEntity {
     public void addBehaviours(java.util.List<BlockEntityBehaviour> behaviours) {
     }
 }
+
+
 

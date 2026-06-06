@@ -71,6 +71,7 @@ docs\机械动力-计算学 CODEX总结文档.txt
 docs\制作记录\
 docs\建模与贴图提示词.txt
 docs\blockbench\createaddon-mcp-modeling-prompt.md
+docs\Create附属开发技术基线.md
 ```
 
 Every completed task should add a new note under:
@@ -88,6 +89,27 @@ The note should include:
 - resource paths
 - verification commands/results
 - next suggested work
+
+## Create Addon Technical Baseline
+
+Before adding or redesigning Create-style mechanics, read:
+
+```text
+docs\Create附属开发技术基线.md
+docs\Create附属与航空学经验基线.md
+```
+
+Current engineering baseline:
+
+- Minecraft `1.21.1`
+- NeoForge `21.1.219`
+- Create `6.0.10-280`
+- Flywheel `1.0.6`
+- Ponder `1.0.82`
+
+New kinetic machines should follow Create's speed/stress model: use `KineticBlockEntity` where appropriate, treat `getSpeed() == 0` as stopped or overstressed, and make faster rotation improve throughput while increasing stress demand.
+
+For computation blocks, prefer modular player-built structures. New computation blocks should normally use `registerComputingItem(...)`, include `block.createaddon.<id>.tooltip.*` language keys, and have a Ponder storyboard.
 
 ## Create Tooltip / Ponder Rule
 

@@ -72,20 +72,26 @@ public final class GuidanceScenes {
         scene.world().showSection(util.select().fromTo(1, 1, 1, 3, 1, 3), Direction.DOWN);
         scene.idle(20);
         scene.overlay().showText(75)
-                .text("Place one function drum and two register columns within 4 blocks of a table printer.")
+                .text("Place at least one function drum and two register columns within 4 blocks of a table printer.")
                 .pointAt(util.vector().centerOf(2, 1, 2))
                 .placeNearTarget();
         scene.idle(85);
         scene.overlay().showText(75)
                 .colored(PonderPalette.BLUE)
-                .text("Use blank table paper on the printer to start timed mechanical computation.")
+                .text("Connect shaft power to the two axis-end faces. The other faces are for right-click use.")
                 .pointAt(util.vector().centerOf(3, 1, 2))
                 .placeNearTarget();
         scene.idle(85);
         scene.overlay().showText(75)
                 .colored(PonderPalette.GREEN)
-                .text("The result is a basic processing curve table for later analytical work.")
+                .text("Right-click with blank table paper, then empty-hand right-click when the table is ready.")
                 .pointAt(util.vector().topOf(3, 1, 2))
+                .placeNearTarget();
+        scene.idle(85);
+        scene.overlay().showText(75)
+                .colored(PonderPalette.BLUE)
+                .text("More components and higher RPM work faster, but high speed needs more stress capacity.")
+                .pointAt(util.vector().centerOf(2, 1, 3))
                 .placeNearTarget();
         scene.idle(85);
         finish(scene);
@@ -100,20 +106,26 @@ public final class GuidanceScenes {
         scene.world().showSection(util.select().fromTo(1, 1, 1, 3, 1, 3), Direction.DOWN);
         scene.idle(20);
         scene.overlay().showText(75)
-                .text("The analytical engine needs a card reader, a Mill, and a Store near the mechanical printer.")
+                .text("Place at least one card reader, one Mill and one Store within 4 blocks of a mechanical printer.")
                 .pointAt(util.vector().centerOf(2, 1, 2))
                 .placeNearTarget();
         scene.idle(85);
         scene.overlay().showText(75)
                 .colored(PonderPalette.BLUE)
-                .text("Feed in a processing curve table to compile machine calibration data.")
+                .text("Connect shaft power to the two axis-end faces. The other faces are for right-click use.")
                 .pointAt(util.vector().centerOf(3, 1, 2))
                 .placeNearTarget();
         scene.idle(85);
         scene.overlay().showText(75)
                 .colored(PonderPalette.GREEN)
-                .text("Calibration cards are the bridge from visible mechanical computation to better machines.")
+                .text("Right-click with a processing curve table, then empty-hand right-click when the card is ready.")
                 .pointAt(util.vector().topOf(3, 1, 2))
+                .placeNearTarget();
+        scene.idle(85);
+        scene.overlay().showText(75)
+                .colored(PonderPalette.BLUE)
+                .text("More readers, Mills and Stores raise computation units; higher RPM also raises stress demand.")
+                .pointAt(util.vector().centerOf(2, 1, 3))
                 .placeNearTarget();
         scene.idle(85);
         finish(scene);

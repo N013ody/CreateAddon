@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "createaddon:block/table_printer"
+    "particle": "createaddon:block/table_printer_side",
+    "down": "createaddon:block/table_printer_end",
+    "up": "createaddon:block/table_printer_end",
+    "north": "createaddon:block/table_printer_side",
+    "south": "createaddon:block/table_printer_side",
+    "west": "createaddon:block/table_printer_side",
+    "east": "createaddon:block/table_printer_status"
   }
 }

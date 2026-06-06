@@ -8,7 +8,9 @@ import io.github.n013ody.createaddon.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Containers;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class ChipMachineBlockEntity extends SmartBlockEntity {
@@ -124,6 +126,21 @@ public class ChipMachineBlockEntity extends SmartBlockEntity {
         if (!outputStack.isEmpty())
             return outputStack;
         return inputStack;
+    }
+
+    public void dropContents(Level level, BlockPos pos) {
+        dropStack(level, pos, outputStack);
+        dropStack(level, pos, inputStack);
+        outputStack = ItemStack.EMPTY;
+        inputStack = ItemStack.EMPTY;
+        resultStack = ItemStack.EMPTY;
+        processingTicks = 0;
+        processingTicksTotal = 0;
+    }
+
+    private static void dropStack(Level level, BlockPos pos, ItemStack stack) {
+        if (!stack.isEmpty())
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), stack.copy());
     }
 
     public void startWorking(int ticks) {

@@ -38,6 +38,13 @@ public class ChipMachineBlock extends Block implements IBE<ChipMachineBlockEntit
         }
     }
 
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock() && level.getBlockEntity(pos) instanceof ChipMachineBlockEntity machine)
+            machine.dropContents(level, pos);
+        IBE.onRemove(state, level, pos, newState);
+    }
+
     protected static void completeProcess(ItemStack input, Player player, Item output, int outputCount, Component message) {
         if (!player.getAbilities().instabuild) {
             input.shrink(1);

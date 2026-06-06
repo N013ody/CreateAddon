@@ -66,5 +66,9 @@ public class ThresholdControllerBlock extends Block implements IBE<ThresholdCont
     protected boolean isSignalSource(BlockState state) {
         return true;
     }
-}
 
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        IBE.onRemove(state, level, pos, newState);
+    }
+}

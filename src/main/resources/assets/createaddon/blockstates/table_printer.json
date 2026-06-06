@@ -1,7 +1,7 @@
 {
   "variants": {
-    "": {
-      "model": "createaddon:block/table_printer"
-    }
+    "axis=x": { "model": "createaddon:block/table_printer", "x": 90, "y": 90 },
+    "axis=y": { "model": "createaddon:block/table_printer" },
+    "axis=z": { "model": "createaddon:block/table_printer", "x": 90 }
   }
 }

@@ -34,7 +34,7 @@ public class LaserRangeFinderBlockEntity extends DoubleSensorBlockEntity {
     @Override
     public void tick() {
         super.tick();
-        if (!level.isClientSide && level.getGameTime() % 2 == 0)
+        if (level != null && !level.isClientSide && level.getGameTime() % 2 == 0)
             sendData();
     }
 

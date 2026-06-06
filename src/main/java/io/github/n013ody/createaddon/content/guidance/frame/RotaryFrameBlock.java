@@ -66,5 +66,9 @@ public class RotaryFrameBlock extends Block implements IBE<RotaryFrameBlockEntit
 
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
-}
 
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        IBE.onRemove(state, level, pos, newState);
+    }
+}

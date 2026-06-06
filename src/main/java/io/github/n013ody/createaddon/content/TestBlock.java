@@ -6,6 +6,7 @@ import com.simibubi.create.foundation.block.IBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
@@ -34,5 +35,9 @@ public class TestBlock extends RotatedPillarKineticBlock implements IBE<TestBloc
     public Axis getRotationAxis(BlockState state) {
         return state.getValue(AXIS);
     }
-}
 
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        IBE.onRemove(state, level, pos, newState);
+    }
+}

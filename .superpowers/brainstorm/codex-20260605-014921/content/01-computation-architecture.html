@@ -1,0 +1,103 @@
+<h2>差分机 / 分析机为什么现在不像 Create</h2>
+<p class="subtitle">左边是当前实现，右边是我建议的重构方向</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">当前实现：范围扫描式黑盒</div>
+    <div class="mockup-body">
+      <div class="section">
+        <div class="label">结构</div>
+        <div class="placeholder" style="padding:18px">
+          <div style="display:flex;justify-content:center;align-items:center;min-height:120px;position:relative">
+            <div style="position:absolute;inset:8px;border:2px dashed #a66;border-radius:12px"></div>
+            <div style="position:absolute;top:8px;left:18px" class="mock-button">函数鼓</div>
+            <div style="position:absolute;top:8px;right:18px" class="mock-button">寄存器柱</div>
+            <div style="position:absolute;bottom:8px;left:18px" class="mock-button">更多组件</div>
+            <div style="position:absolute;bottom:8px;right:18px" class="mock-button">更多组件</div>
+            <div style="padding:16px 18px;border:2px solid #d66;border-radius:10px;background:#2a1414">数表打印机 / 机械打印机</div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="cons">
+          <h4>主要问题</h4>
+          <ul>
+            <li>组件只要靠近就生效，没有“被机械连接起来”的感觉</li>
+            <li>核心方块还是中心黑盒，周围组件更像摆件加成</li>
+            <li>玩家看不出差分机和分析机各自在处理什么</li>
+            <li>传动轴只接在打印机上，不像一整台 Create 机器</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">建议方向：同轴传动的模块化计算机</div>
+    <div class="mockup-body">
+      <div class="section">
+        <div class="label">差分机</div>
+        <div class="placeholder" style="padding:18px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <div class="mock-button">动力输入</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">函数设定鼓</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">差分寄存器柱 × N</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">数表打印机</div>
+          </div>
+          <p style="margin-top:12px">定位：<strong>机械参数表工厂</strong>。把函数和增量变成能给后续机器读取的数表。</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="label">分析机</div>
+        <div class="placeholder" style="padding:18px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <div class="mock-button">动力输入</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">穿孔卡读卡器</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">Mill 运算部</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">Store 存储柱 × N</div>
+            <div style="font-size:22px">→</div>
+            <div class="mock-button">机械打印机</div>
+          </div>
+          <p style="margin-top:12px">定位：<strong>早期可编程控制器</strong>。读取数表和程序介质，生成校准卡、控制卡、参数卡。</p>
+        </div>
+      </div>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>为什么更像 Create</h4>
+          <ul>
+            <li>模块要挂在同一条传动线或同一机械总线上才能工作</li>
+            <li>增加模块不是简单加分，而是扩大能力上限和流程长度</li>
+            <li>玩家一眼能看出输入、运算、存储、输出各在哪</li>
+            <li>后续更容易扩展更多鼓、更多寄存器、更多程序介质</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>这次我建议先定的一条硬规则</h3>
+  <div class="options">
+    <div class="option" data-choice="same-shaft-line" onclick="toggleSelect(this)">
+      <div class="letter">A</div>
+      <div class="content">
+        <h3>同一传动线</h3>
+        <p>计算组件必须接在同一条机械传动线上，不能只靠附近扫描生效。</p>
+      </div>
+    </div>
+    <div class="option" data-choice="keep-nearby-scan" onclick="toggleSelect(this)">
+      <div class="letter">B</div>
+      <div class="content">
+        <h3>保留附近扫描</h3>
+        <p>继续允许摆在附近就生效，只优化说明和外观。</p>
+      </div>
+    </div>
+  </div>
+</div>

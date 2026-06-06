@@ -53,5 +53,9 @@ public class GuidanceSensorBlock<T extends AbstractSensorBlockEntity<?>> extends
             return InteractionResult.PASS;
         return sensor.onUse(player);
     }
-}
 
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        IBE.onRemove(state, level, pos, newState);
+    }
+}
